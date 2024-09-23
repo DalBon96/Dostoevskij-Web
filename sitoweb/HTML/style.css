@@ -1,0 +1,166 @@
+
+/*#0e141b blue dark    #1a2531 Blue dark light*/
+
+
+html {
+  background-color: #0e141b;
+  
+}
+
+
+/*TITLE IN THE MAIN PAGE*/
+/*All titles in top of the pages*/
+#title-name{
+color:rgb(221, 221, 221);
+text-align: left;
+padding-left: 100px;
+margin-top: 80px;
+margin-bottom: 10px;
+border-top: 40px;
+font-family: "Roboto",sans-serif;
+font-size: 60px;
+}
+
+#introduction{
+color:rgb(221, 221, 221);
+font-family:"Roboto";
+font-weight: 300;
+font-style: normal;
+text-align: left;
+padding-left: 100px;
+font-size: 20px;
+}
+
+#title-name, #introduction, #top_cubes{
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start position below the final position */
+    animation: fadeInSlideUp 2s ease forwards; /* 2s animation */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Initial position: slide down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+
+.icon_writer{
+    float: right;
+    padding-right: 400px;
+    padding-top: 10px;
+}
+.profile {
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+#top_cubes{
+color:rgb(221, 221, 221);
+font-family:"Roboto";
+font-weight: 400;
+font-style: normal;
+text-align: left;
+padding-left: 100px;
+margin-top: 50px;
+font-size: 35px;
+}
+
+#intro_writer{
+padding-left: 280px;
+}
+/*******************/
+
+/* Container holding the BOOKS */
+.grid-container {
+display: grid;              /* Enable CSS Grid */
+grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+gap: 5px;
+justify-items: center;
+align-items: center;
+padding: 10px 300px;
+margin-top: 0; /* Remove any top margin that might be adding extra space */
+}
+
+/* Each cube */
+.cube {
+border-radius:10px;
+width: 280px;
+height: 380px;
+background-color: aliceblue;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Ensures image doesn't overflow the cube */
+
+}
+
+.cube img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures the image fills the cube while maintaining aspect ratio */
+border-radius: 10px; /* Keeps the image rounded if the cube has border-radius */
+}
+
+.cube {
+border-radius: 10px;
+width: 280px;
+height: 380px;
+background-color: aliceblue;
+position: relative; /* Required for absolute positioning of the title */
+overflow: hidden;
+}
+
+.content{
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0;
+position: absolute;
+background-color: rgba(0,0,0,0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+opacity: 0;
+transition: 0.6s;
+}
+
+.content:hover{
+opacity: 1;
+}
+/* Wrapper for the image and title */
+
+.text_inside_cube{
+text-align: center;
+font-family:"Roboto";
+font-weight: 300;
+font-style: normal;
+color: aliceblue;
+}
+.text_inside_cube2{
+text-align: center;
+font-family:"Roboto";
+font-weight: 100;
+font-size: 14px;
+font-style: normal;
+color: aliceblue;
+}
+
+.content > *{
+transform: translateY(0px);
+}
+
